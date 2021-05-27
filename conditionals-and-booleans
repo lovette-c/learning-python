@@ -1,0 +1,74 @@
+#Conditionals & Booleans - If, Else, and ElIf Statements
+
+##Comparisons:
+# Equal:            ==
+# Not Equal:        !=
+# Greater Than:     >
+# Less Than:        < 
+# Greater or Equal: >=
+# Less or Equal:    <=
+# Object Identity: is (do values have same id)
+
+# and
+# or
+# not
+
+
+##If
+langauge = 'Java'
+if langauge == 'Python':
+    print('Language is Python')
+
+##ElIf (if not Java then test)
+elif langauge == 'Java':
+    print('Language is Java')
+    
+##Else
+else:
+    print('No match')
+
+
+##And
+user = 'Admin'
+logged_in = False
+if user == 'Admin' and logged_in:
+    print('Admin Page')
+else:
+    print('Bad Creds')
+
+##Not
+if not logged_in:
+    print('Please log in')
+else:
+    print('Welcome')
+
+
+#== vs object identity
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)
+print(a is b)
+#false b/c diff id
+print(id(a))
+print(id(b))
+
+#instead
+b = a
+#same id
+print(a is b)
+
+
+##False values: (anything else = true)
+# False
+# None
+# Zero of any numeric type
+# Any empty sequence. Ex. '', (), []
+# Any empty mapping. Ex. {}
+
+condition = 2
+
+if condition:
+    print('Evaluated to True')
+else:
+    print('Evaluated to False')
