@@ -1,0 +1,44 @@
+#Functions
+'''takes input and produces output
+executed function = return value'''
+
+#Put paramters in ()
+def hello_func():
+    '''DOCSTRING - multiline
+comment... put under a fn to tell you what it does'''
+    print('Hello Fn!')
+
+hello_func()
+
+
+#here return is a string - can use string fns on it
+#{} = placeholder for input
+def hello_func(greeting):
+    return '{} Function.'.format(greeting)
+
+print(hello_func('Hi').upper())
+
+
+#'you' = placeholder if there is no input
+def hello_func(greeting, name = 'You'):
+    return '{}, {}'.format(greeting, name)
+
+print(hello_func('Hi', name = 'Bob'))
+
+
+#Args & kwargs
+def student_info(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+courses = ['Math', 'Art']
+info = {'name': 'John', 'age': 22}
+
+student_info(*courses, **info)
+
+
+#Ex. fn.
+def add_one(n):
+    return n+1
+
+print(add_one(5))
