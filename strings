@@ -1,0 +1,65 @@
+#Strings - textual data
+
+
+#Single quote vs double quote
+'''if string contains ' then use backslash or double quotes'''
+message = 'Bobby\'s World'
+print (message)
+
+message2 = "Bobby's World"
+print(message2)
+
+message3 = '"Bobby\'s World"'
+print(message3)
+
+
+#Multi-line string
+message4 = """Bobby's World
+was
+good"""
+print(message4)
+
+
+#Length of string (incl. spaces and punctuation)
+print(len(message2))
+
+
+#Index
+'''Certain position in string (starts at 0)'''
+print(message[-1])
+    #beginning to a point (2nd number not inclusive)
+print(message[0:5])
+    #or
+print(message[:5])
+print(message[8:])
+
+
+#All upper/lowercase
+print(message.lower())
+print(message.upper())
+
+
+#Count amount of times string appears
+print(message.count('Bobby'))
+
+
+#Find location of string
+print(message.find('B'))
+
+
+#Replace string
+message = message.replace('World', 'Universe')
+print(message)
+
+
+#Combine strings 
+greeting = 'Hello'
+name = 'Lovette'
+
+message = greeting + ', ' + name
+    #or using placeholders
+message = '{}, {}. Welcome!'.format(greeting, name)
+print(message)
+    #or using f-strings
+message = f'{greeting}, {name.upper()}. Welcome!'
+print(message)
