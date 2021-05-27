@@ -1,58 +1,60 @@
 #Lists, Tuples, and Sets
 
 #Empty lists
-'''mutable - change'''
+'''ordered, any type of object & mutable (change)'''
 l = []
 l = list()
 
 #Empty tuples
-'''immutable - don't change'''
+'''immutable (don't change)'''
 t = ()
 t = tuple()
 
 #Empty sets
-'''unordered'''
+'''unordered & unique values - gets rid of duplicates'''
 '''s = {} wrong - is a dictionary '''
 s = set()
 
 
-##Lists
-courses = ['History', 'Math', 'Physics', 'CompSci']
+##List fns
+courses = ['History', 40, {3}, 'CompSci']
 print(courses)
-
-    #last item
-print(courses[-1])
 
 #Adding & subtracting from list
-    #+ to list
+'''+ to list'''
 courses.append('Art')
-    #+ to list at a section
+'''+ to list at a section'''
 courses.insert(0, 'Sci')
 print(courses)
-    #+ list to another list
+'''+ list to another list'''
 courses_2 = ['Education', 'Gym']
 courses.extend(courses_2)
-
-    #- from list
+'''- from list'''
 courses.remove('Math')
-    #- last item from list
+'''- last item from list'''
 courses.pop()
 
 #Sorting
-#reverse
-courses.reverse()
-
-#sort (by ascending alphabetical order or numerical value)
+'''ascending alphabetical order or numerical value'''
 courses.sort()
-    #decscending
-courses.sort(reverse=True)
-    #or sort fn (don't have to alter list)
+
+'''sort but outputs a new list'''
 sorted_courses = sorted(courses)
 
-#index
+'''reverse'''
+courses.reverse()
+
+    #decscending
+courses.sort(reverse=True)
+
+#Indexing
+'''last item'''
+print(courses[-1])
+
+'''index'''
 print(courses.index('Physics'))
 
-#check for something in list
+#Check for something in list
 print('CompSci' in courses)
 
 
@@ -72,7 +74,8 @@ print(course_str)
 new_list = course_str.split('-')
 print(new_list)
 
-##Lists
+##List fns
+'''shows mutability'
 list_1 = ['A', 'B']
 list_2 = list_1
 print(list_1)
@@ -93,14 +96,24 @@ print(tuple_2)'''
 
 
 ##Sets
-colours_1 = {'Blue', 'Red'}
-colours_2 = {'Green', 'Blue'}
-#in common
-print(colours_1.intersection(colours_2))
-#join sets
-print(colours_1.union(colours_2))
-#add/remove to/from empty set
-numbers = set()
-numbers.add(1)
-numbers.add(2)
-numbers.remove(2)
+'''+/- from set'''
+x = set()
+x.add(1)
+x.remove()
+
+#Operations
+'''in common'''
+print(a.intersection(b))
+print(a & b)
+
+'''combined'''
+print(a.union(b))
+print(a | b)
+
+'''diff'''
+print(a.difference(b))
+print (a - b)
+
+'''not in common'''
+print(a.symmetric_difference(b))
+print(a ^ b)
