@@ -1,0 +1,49 @@
+#Integers & Floats
+'''integers = numerical data
+float = decimal'''
+
+#Type
+num = 3.14
+print(type(num))
+
+##Arithmetic
+print(3/2)
+    #floor division - returns largest possible integer
+print(3//2)
+
+    #exponent
+print(3**2)
+
+    #modulus - remainder after division
+print(3%2)
+    #divide a number by 2 - if get remainder 0 = even, r1 = odd
+
+
+#shortcuts
+num = 1
+    #same as num=num+1
+num += 1
+print(num)
+
+#Absoulute
+print(abs(-5))
+
+#Round
+#to 1 decimal place
+print(round(3.75, 1))
+
+#Comparisons:
+# Equal:            3 == 2
+# Not Equal:        3 != 2
+# Greater Than:     3 > 2
+# Less Than:        3 < 2
+# Greater or Equal: 3 >= 2
+# Less or Equal:    3 <= 2
+
+#String --> integer
+num_1 = '100'
+num_1 = int(num_1)
+
+#Integer --> string
+thirteen = str(6+7)
+print(thirteen)
