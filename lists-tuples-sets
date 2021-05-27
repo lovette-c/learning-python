@@ -1,0 +1,106 @@
+#Lists, Tuples, and Sets
+
+#Empty lists
+'''mutable - change'''
+l = []
+l = list()
+
+#Empty tuples
+'''immutable - don't change'''
+t = ()
+t = tuple()
+
+#Empty sets
+'''unordered'''
+'''s = {} wrong - is a dictionary '''
+s = set()
+
+
+##Lists
+courses = ['History', 'Math', 'Physics', 'CompSci']
+print(courses)
+
+    #last item
+print(courses[-1])
+
+#Adding & subtracting from list
+    #+ to list
+courses.append('Art')
+    #+ to list at a section
+courses.insert(0, 'Sci')
+print(courses)
+    #+ list to another list
+courses_2 = ['Education', 'Gym']
+courses.extend(courses_2)
+
+    #- from list
+courses.remove('Math')
+    #- last item from list
+courses.pop()
+
+#Sorting
+#reverse
+courses.reverse()
+
+#sort (by ascending alphabetical order or numerical value)
+courses.sort()
+    #decscending
+courses.sort(reverse=True)
+    #or sort fn (don't have to alter list)
+sorted_courses = sorted(courses)
+
+#index
+print(courses.index('Physics'))
+
+#check for something in list
+print('CompSci' in courses)
+
+
+#Loop
+for course in courses:
+    print(course)
+#list + index
+for index, course in enumerate(courses):
+    print(index, course)
+        
+
+#List to string with something inbetween
+course_str = ', '.join(courses)
+print(course_str)
+
+#split string
+new_list = course_str.split('-')
+print(new_list)
+
+##Lists
+list_1 = ['A', 'B']
+list_2 = list_1
+print(list_1)
+print(list_2)
+
+list_1[0] = 'C'
+print(list_1)
+print(list_2)
+
+
+##Tuples 
+tuple_1 = ('A', 'B')
+tuble_2 = tuple_1
+
+''' tuple_1[0] = 'C' get error
+print(tuple_1)
+print(tuple_2)'''
+
+
+##Sets
+colours_1 = {'Blue', 'Red'}
+colours_2 = {'Green', 'Blue'}
+#in common
+print(colours_1.intersection(colours_2))
+#join sets
+print(colours_1.union(colours_2))
+#add/remove to/from empty set
+numbers = set()
+numbers.add(1)
+numbers.add(2)
+numbers.remove(2)
