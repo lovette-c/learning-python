@@ -1,0 +1,34 @@
+#Dictionaries - Working with Key-Value Pairs
+
+#Dictionary - {key: value}
+'''values can be anything... string, number, list, etc.'''
+
+student = {'name': 'John', 'age': 25, 'courses': ['Math', 'Compsci']}
+print(student['name'])
+
+print(student.get('name'))
+
+#Update dictionary
+student.update({'name': 'Jane', 'age': 26, 'phone': '555-5555'})
+print(student)
+
+#Delete
+del student['phone']
+print(student)
+
+#Pop
+age = student.pop('age')
+print(student)
+print(age)
+
+#Number of keys
+print(len(student))
+
+#Print keys, values, or both
+print(student.keys())
+print(student.values())
+print(student.items())
+
+#List keys
+for key, value in student.items():
+    print(key, value)
